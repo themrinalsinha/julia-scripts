@@ -23,3 +23,27 @@ println(Int('1')==1)
 s1_caps  = uppercase(s1)
 s1_lower = lowercase(s1)
 println(s1_caps, "\n", s1_lower)
+
+# Substring can be indexed like array
+show(s1[11]); println()
+show(s1[11:15]); println()
+show(s1[11:end]); println()
+show(s1[end-11:end]); println()
+show(s1[1:end]); println()
+
+# Julia allows string Interpolation:
+a = "Welcome"
+b = "To Julia..."
+println("$a $b")
+
+# This can be extended to evaluate statements:
+println("1 + 2 = $(1 + 2)")
+
+# String can also be concatenated using the * operator
+# using * instead of + isn't intutive when you start with Julia,
+# however people think it makes more sense.
+s2 = "this" * " and" * " that"
+println(s2)
+# as well as string function
+s3 = string("this", " and", " that.")
+println(s3)
